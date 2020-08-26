@@ -1,4 +1,4 @@
-# sudoku
+
 
 board = [
     [7,8,0,4,0,0,1,2,0],
@@ -17,7 +17,7 @@ def print_board(bo):
     # prints horizontal and vertical dividers every 3 rows and columns
     for i in range(len(bo)):
         if i % 3 == 0 and i != 0:
-            print("- - - - - - - - - - - - -")
+            print("- - - - - - - - - - - - ")
 
         for j in range(len(bo[0])):
             if j % 3 == 0 and j != 0:
@@ -27,5 +27,14 @@ def print_board(bo):
                 print(bo[i][j])
             else:
                 print(str(bo[i][j]) + " ", end="")
+
+
+# finds an empty spot(denoted by 0) and returns it
+# returns row, column tuple
+def find_empty(bo):
+    for i in range(len(bo)):
+        for i in range(len(bo[0])):
+            if bo[i][j] == 0:
+                return(i, j )
 
 print_board(board)
