@@ -1,2 +1,1 @@
-# Neural-Network
 # Sudoku-Solver
